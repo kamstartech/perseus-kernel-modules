@@ -42,6 +42,7 @@ mkdir -p "$OUT_DIR"
 make -C "$HEADERS_DIR" \
     M="$(realpath $MODULE_SRC)" \
     CONFIG_QCA_CLD_WLAN=m \
+    -j$(nproc) \
     modules
 
 find "$(realpath $MODULE_SRC)" -name "*.ko" -exec cp {} "$OUT_DIR/" \;
