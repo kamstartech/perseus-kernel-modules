@@ -1,0 +1,12 @@
+# Ignore built object files in module source dirs
+*.o
+*.cmd
+*.mod
+*.mod.c
+*.order
+*.symvers
+modules.builtin
+
+# Keep pre-built .ko binaries and headers
+!modules/**/*.ko
+!headers/**
